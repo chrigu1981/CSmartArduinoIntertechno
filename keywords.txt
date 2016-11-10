@@ -1,0 +1,4 @@
+CSmartIntertechno	KEYWORD1
+turnOn	KEYWORD2
+turnOff	KEYWORD2
+dim	KEYWORD2
