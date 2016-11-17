@@ -19,6 +19,7 @@ void CSmartIntertechno::turnOn(int id, int unit, int repeat){
         this->sendPulseOn();
         this->sendUnitCode(unit);
         this->sendEnd();
+        yield();
     }
 }
 
@@ -30,6 +31,7 @@ void CSmartIntertechno::turnOff(int id, int unit,int repeat){
         this->sendPulseOff();
         this->sendUnitCode(unit);
         this->sendEnd();
+        yield();
     }
 }
 
@@ -43,6 +45,7 @@ void CSmartIntertechno::dim(int id, int unit, float value, int repeat){
         this->sendUnitCode(unit);
         this->sendDim(value);
         this->sendEnd();
+        yield();
     }
 }
 
@@ -161,6 +164,7 @@ void CSmartIntertechno::sendDim(int code) {
     else
       this->sendPulseHigh();
   }
+  
   digitalWrite(_pin,1);
   delayMicroseconds((speedInt*_short));
   digitalWrite(_pin,1);
