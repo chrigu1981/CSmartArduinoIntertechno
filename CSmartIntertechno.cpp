@@ -19,8 +19,9 @@ void CSmartIntertechno::turnOn(int id, int unit, int repeat){
         this->sendPulseOn();
         this->sendUnitCode(unit);
         this->sendEnd();
-        yield();
     }
+    
+    yield();
 }
 
 void CSmartIntertechno::turnOff(int id, int unit,int repeat){
@@ -31,8 +32,9 @@ void CSmartIntertechno::turnOff(int id, int unit,int repeat){
         this->sendPulseOff();
         this->sendUnitCode(unit);
         this->sendEnd();
-        yield();
     }
+    
+    yield();
 }
 
 void CSmartIntertechno::dim(int id, int unit, float value, int repeat){
@@ -45,8 +47,9 @@ void CSmartIntertechno::dim(int id, int unit, float value, int repeat){
         this->sendUnitCode(unit);
         this->sendDim(value);
         this->sendEnd();
-        yield();
     }
+    
+    yield();
 }
 
 String CSmartIntertechno::decToBin(int number) {

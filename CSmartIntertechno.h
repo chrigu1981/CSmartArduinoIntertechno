@@ -12,12 +12,12 @@
 class CSmartIntertechno{
   public:
     CSmartIntertechno(int pin);
-    void turnOn(int id, int unit, int repeat=10);
-    void turnOff(int id, int unit, int repeat=10);
-    void dim(int id, int unit, float value, int repeat=10);
+    void turnOn(int id, int unit, int repeat=6);
+    void turnOff(int id, int unit, int repeat=6);
+    void dim(int id, int unit, float value, int repeat=6);
   private:
     int _pin;
-    int speedInt = 100;
+    int speedInt = 95;
     int start = 25;
     int _short = 2;
     int _long = 12; 
